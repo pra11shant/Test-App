@@ -5,6 +5,7 @@ app_description = "test"
 app_email = "pk@pk.com"
 app_license = "mit"
 # required_apps = []
+# doctype_js = {"ToDo" : "pm_overriders_js/todo.js"}
 
 # Includes in <head>
 # ------------------
