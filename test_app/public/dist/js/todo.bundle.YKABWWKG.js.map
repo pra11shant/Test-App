@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../apps/test_app/test_app/public/js/todo/todo.js"],
+  "sourcesContent": ["frappe.provide(\"test_app.todo.todo\")\ntest_app.todo.todo.demo = function(priority){\n\tconsole.log(\"Priority is: \",priority,\"And Call From Inside function Path: apps/test_app/test_app/public/js/todo/todo.js\");\n}\nconsole.log(\"call from Outer js => Test App\");\n"],
+  "mappings": ";;AAAA,SAAO,QAAQ,oBAAoB;AACnC,WAAS,KAAK,KAAK,OAAO,SAAS,UAAS;AAC3C,YAAQ,IAAI,iBAAgB,UAAS,mFAAmF;AAAA,EACzH;AACA,UAAQ,IAAI,gCAAgC;",
+  "names": []
+}

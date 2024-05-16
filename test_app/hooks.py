@@ -12,7 +12,9 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/test_app/css/test_app.css"
-# app_include_js = "/assets/test_app/js/test_app.js"
+app_include_js = [
+    "todo.bundle.js"
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/test_app/css/test_app.css"
@@ -29,7 +31,9 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "ToDo"						:"test_app/customization/todo/todo.js"	 # Module: Test_App main Event trigger file
+    }							
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -115,21 +119,27 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"ToDo": "test_app.test_app.customization.todo.todo.CustomToDo"
+}
 
 # Document Events
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+
+    "ToDo": {
+		"validate": [
+			"test_app.test_app.customization.todo.todo.validate" # Testing Purpose
+		]   
+	},
+}
 
 # Scheduled Tasks
 # ---------------
